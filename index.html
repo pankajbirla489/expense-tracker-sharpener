@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+        .table {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Expense Tracker</h1>
+        <form id="expense-form" class="row g-3">
+            <div class="col-md-4">
+                <label for="expense-name" class="form-label">Expense Name</label>
+                <input type="text" class="form-control" id="expense-name" required>
+            </div>
+            <br/>
+            <div class="col-md-4">
+                <label for="expense-amount" class="form-label">Amount</label>
+                <input type="number" class="form-control" id="expense-amount" required>
+            </div>
+            <br/>
+            <div class="col-md-4 align-self-end">
+                <button type="submit" class="btn btn-primary">Add Expense</button>
+            </div>
+        </form>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <h2>Expense List</h2>
+
+                </tr>
+            </thead>
+            <tbody id="expense-list">
+                <!-- Expense items will be added here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="expense-tracker.js"></script>
+</body>
+</html>
